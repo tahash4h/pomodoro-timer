@@ -2,6 +2,10 @@
 
 A modern, minimalist Pomodoro timer built with Next.js and TypeScript. This application helps you stay focused and productive using the Pomodoro Technique.
 
+## Live Demo
+
+Check out the live version: [Pomodoro Timer](https://pomodoro-timer-ten-pi.vercel.app/)
+
 ## Features
 
 - 🎯 Clean, minimalist black and white design
