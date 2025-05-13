@@ -4,7 +4,7 @@ A modern, minimalist Pomodoro timer built with Next.js and TypeScript. This appl
 
 ## Live Demo
 
-Check out the live version: [Pomodoro Timer](https://pomodoro-timer-ten-pi.vercel.app/)
+Check out the live version: [Pomodoro Timer](https://pomodoro-tim3r.vercel.app/)
 
 ## Features
 
