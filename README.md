@@ -1,6 +1,10 @@
-# Private Timer
+# Pomodoro Timer
 
-A personal timer application for private use.
+A modern, minimalist Pomodoro timer built with Next.js and TypeScript. This application helps you stay focused and productive using the Pomodoro Technique.
+
+## Live Demo
+
+Check out the live version: [Pomodoro Timer](https://pomodoro-tim3r.vercel.app/)
 
 ## Features
 
