@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>POMODORO</h1>
+      <h1 className={styles.title}>POMODORO </h1>
       
       <div className={styles.timerContainer}>
         <div className={styles.timer}>

@@ -9,11 +9,12 @@ Check out the live version: [Pomodoro Timer](https://pomodoro-tim3r.vercel.app/)
 ## Features
 
 - 🎯 Clean, minimalist black and white design
-- ⏱️ Real-time countdown display
+- ⏱️ Real-time countdown display with hours, minutes, and seconds
 - 🎨 Beautiful animations and hover effects
 - ⚡ Start, pause, resume, and stop functionality
 - ⚙️ Custom time setting (1-60 minutes)
-- 📱 Responsive design for all screen sizes
+- 📱 Fully responsive design for all screen sizes
+- 🎨 Modern UI with smooth transitions
 
 ## Getting Started
 
@@ -48,6 +49,7 @@ npm run dev
 - TypeScript
 - CSS Modules
 - Tailwind CSS
+- Geist Font
 
 ## License
 

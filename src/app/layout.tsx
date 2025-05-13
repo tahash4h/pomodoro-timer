@@ -8,7 +8,7 @@ const geistMono = GeistMono
 
 export const metadata: Metadata = {
   title: "Pomodoro Timer",
-  description: "A beautiful Pomodoro timer for better productivity",
+  description: "A beautiful and efficient Pomodoro timer for enhanced productivity",
 };
 
 export default function RootLayout({
