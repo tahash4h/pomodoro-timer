@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './styles/timer.module.css';
 
 export default function Home() {
@@ -9,18 +9,30 @@ export default function Home() {
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [customMinutes, setCustomMinutes] = useState<string>('25');
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isRunning && !isPaused && timeLeft > 0) {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout | undefined;
+    
+    if (mounted && isRunning && !isPaused && timeLeft > 0) {
       timer = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
     }
-    return () => clearInterval(timer);
-  }, [isRunning, isPaused, timeLeft]);
+    
+    return () => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+  }, [isRunning, isPaused, timeLeft, mounted]);
 
-  const formatTime = (seconds: number): React.ReactNode => {
+  const formatTime = useCallback((seconds: number): React.ReactNode => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
@@ -34,29 +46,29 @@ export default function Home() {
         <span>{secs.toString().padStart(2, '0')}</span>
       </>
     );
-  };
+  }, []);
 
-  const handleStart = (): void => {
+  const handleStart = useCallback((): void => {
     setIsRunning(true);
     setIsPaused(false);
-  };
+  }, []);
 
-  const handlePause = (): void => {
+  const handlePause = useCallback((): void => {
     setIsPaused(true);
-  };
+  }, []);
 
-  const handleResume = (): void => {
+  const handleResume = useCallback((): void => {
     setIsPaused(false);
-  };
+  }, []);
 
-  const handleStop = (): void => {
+  const handleStop = useCallback((): void => {
     setIsRunning(false);
     setIsPaused(false);
     const minutes = parseInt(customMinutes);
     setTimeLeft((!isNaN(minutes) && minutes > 0) ? minutes * 60 : 25 * 60);
-  };
+  }, [customMinutes]);
 
-  const handleCustomTime = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleCustomTime = useCallback((e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const minutes = parseInt(customMinutes);
     if (!isNaN(minutes) && minutes > 0) {
@@ -64,11 +76,15 @@ export default function Home() {
       setIsRunning(false);
       setIsPaused(false);
     }
-  };
+  }, [customMinutes]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>POMODORO</h1>
+      <h1 className={styles.title}>work endri7k</h1>
       
       <div className={styles.timerContainer}>
         <div className={styles.timer}>

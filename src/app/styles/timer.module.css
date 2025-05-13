@@ -26,13 +26,12 @@
 }
 
 .title {
-  font-size: 10rem;
+  font-size: 6rem;
   font-weight: 900;
   text-align: center;
   margin-bottom: 6rem;
   font-family: 'Geist', sans-serif;
   letter-spacing: -0.08em;
-  text-transform: uppercase;
   position: relative;
   background: linear-gradient(to right, #ffffff, #a8a8a8);
   -webkit-background-clip: text;
