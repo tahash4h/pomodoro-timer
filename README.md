@@ -1,39 +1,29 @@
-# Pomodoro Timer
+# Private Timer
 
-A modern, minimalist Pomodoro timer built with Next.js and TypeScript. This application helps you stay focused and productive using the Pomodoro Technique.
-
-## Live Demo
-
-Check out the live version: [Pomodoro Timer](https://pomodoro-tim3r.vercel.app/)
+A personal timer application for private use.
 
 ## Features
 
 - 🎯 Clean, minimalist black and white design
-- ⏱️ Real-time countdown display with hours, minutes, and seconds
+- ⏱️ Real-time countdown display
 - 🎨 Beautiful animations and hover effects
 - ⚡ Start, pause, resume, and stop functionality
 - ⚙️ Custom time setting (1-60 minutes)
-- 📱 Fully responsive design for all screen sizes
-- 🎨 Modern UI with smooth transitions
+- 📱 Responsive design for all screen sizes
 
 ## Getting Started
 
-1. Clone the repository:
-```bash
-git clone [your-repo-url]
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Run the development server:
+2. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Usage
 
@@ -45,16 +35,12 @@ npm run dev
 
 ## Technologies Used
 
-- Next.js 14
+- Next.js
 - TypeScript
 - CSS Modules
 - Tailwind CSS
 - Geist Font
 
-## License
+## Private Use Only
 
-MIT License - feel free to use this project for your own purposes.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+This application is for personal use only. Please do not share or distribute.
