@@ -52,7 +52,8 @@ export default function Home() {
   const handleStop = (): void => {
     setIsRunning(false);
     setIsPaused(false);
-    setTimeLeft(parseInt(customMinutes) * 60);
+    const minutes = parseInt(customMinutes);
+    setTimeLeft((!isNaN(minutes) && minutes > 0) ? minutes * 60 : 25 * 60);
   };
 
   const handleCustomTime = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -67,7 +68,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Pomodoro</h1>
+      <h1 className={styles.title}>POMODORO</h1>
       
       <div className={styles.timerContainer}>
         <div className={styles.timer}>
