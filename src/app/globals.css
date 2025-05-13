@@ -16,3 +16,19 @@ body {
     rgb(var(--background-end-rgb))
   );
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
